@@ -13,7 +13,7 @@ function App() {
       return;
     }
 
-    fetch(`http://localhost:5000/search?name=${encodeURIComponent(searchName)}`)
+    fetch(`https://runner-mvp.onrender.com/search?name=${encodeURIComponent(searchName)}`)
       .then((res) => res.json())
       .then((data) => {
         setResults(data);
@@ -28,7 +28,7 @@ function App() {
 
       <div className="search-card">
         <h2>Search Runner</h2>
-        <p>Search runner results imported from the official Melbourne Marathon results.</p>
+        <p>Search runner results imported from the Australian Outback Marathon results.</p>
 
         <div className="search-box">
           <input
@@ -100,8 +100,6 @@ function App() {
                   <strong>{runner.gender || "N/A"}</strong>
                 </div>
               </div>
-
-              
             </div>
           ))}
         </div>
